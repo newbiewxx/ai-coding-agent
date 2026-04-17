@@ -1,10 +1,10 @@
 import { stepCountIs, ToolLoopAgent } from "ai";
-import { ollama_model } from "./models.ts"; 
+import { ollama_model } from "./models.ts";
 import tools from "./tools/index.ts";
 
 export const agent = new ToolLoopAgent({
   model: ollama_model,
-  // prompt: "现在几点了?",
-  stopWhen: stepCountIs(3),
+  stopWhen: stepCountIs(10),
+  temperature: 0.1,
   tools,
-}); 
+});
