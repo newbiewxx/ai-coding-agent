@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "bin": "dist/main.js",
   "type": "module",
+  "files": ["dist"],
   "scripts": {
     "commit": "committier commit",
     "start": "tsx dist/index.js",
